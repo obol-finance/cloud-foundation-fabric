@@ -12,13 +12,17 @@ org_policies:
     rules:
       - allow:
           values:
-          - EXTERNAL_HTTP_HTTPS
+            - EXTERNAL_HTTP_HTTPS
   run.allowedIngress:
     rules:
       - allow:
           values:
-          - internal-and-cloud-load-balancing
-          - internal
+            - internal-and-cloud-load-balancing
+            - internal
+  iam.allowedPolicyMemberDomains:
+    rules:
+      - allow:
+          all: true
 
 vpc:
   gke_setup:
