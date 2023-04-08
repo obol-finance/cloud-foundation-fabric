@@ -1,0 +1,2 @@
+$ export GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token --impersonate-service-account=org-prod-bootstrap-0@org-prod-iac-core-0.iam.gserviceaccount.com)
+
