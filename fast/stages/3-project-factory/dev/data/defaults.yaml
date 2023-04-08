@@ -9,7 +9,7 @@ labels:
   environment: dev
 
 # [opt] Contacts for billing alerts and important notifications
-essential_contacts: ["yarden@obol.app", "michael@obol.app"]
+essential_contacts: []
 
 # [opt] Additional notification channels for billing
 notification_channels: []
