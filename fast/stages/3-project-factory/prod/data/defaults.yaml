@@ -6,7 +6,7 @@ billing_account_id: 010235-396372-5DC925
 billing_alert:
 
 labels:
-  environment: dev
+  environment: production
 
 # [opt] Contacts for billing alerts and important notifications
 essential_contacts: ["yarden@obol.app", "michael@obol.app"]

@@ -1,0 +1,9 @@
+# skip boilerplate check
+
+# Folder the project will be created as children of
+folder_id: folders/508707481980
+
+
+# [opt] Labels for the project - merged with the ones defined in defaults
+labels:
+  environment: dev
