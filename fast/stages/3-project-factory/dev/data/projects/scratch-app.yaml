@@ -37,6 +37,10 @@ org_policies:
       - allow:
           all: true
 
+services:
+  - vpcaccess.googleapis.com
+  - run.googleapis.com
+
 vpc:
   gke_setup:
   subnets_iam:
