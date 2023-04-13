@@ -40,6 +40,8 @@ org_policies:
 services:
   - vpcaccess.googleapis.com
   - run.googleapis.com
+  - artifactregistry.googleapis.com
+  - cloudbuild.googleapis.com
 
 vpc:
   gke_setup:
