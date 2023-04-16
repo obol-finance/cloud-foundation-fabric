@@ -42,6 +42,10 @@ services:
   - run.googleapis.com
   - artifactregistry.googleapis.com
   - cloudbuild.googleapis.com
+  - secretmanager.googleapis.com
+  - pubsub.googleapis.com
+  - composer.googleapis.com
+
 
 vpc:
   gke_setup:
