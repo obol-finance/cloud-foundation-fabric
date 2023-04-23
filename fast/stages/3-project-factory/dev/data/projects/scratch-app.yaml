@@ -45,10 +45,11 @@ services:
   - secretmanager.googleapis.com
   - pubsub.googleapis.com
   - composer.googleapis.com
-
+  - container.googleapis.com
 
 vpc:
   gke_setup:
   subnets_iam:
   # Host project the project will be service project of
+
   host_project: org-dev-net-spoke-0
