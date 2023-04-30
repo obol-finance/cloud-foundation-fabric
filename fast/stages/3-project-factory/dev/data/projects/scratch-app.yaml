@@ -29,9 +29,7 @@ org_policies:
   run.allowedIngress:
     rules:
       - allow:
-          values:
-            - internal-and-cloud-load-balancing
-            - internal
+          all: true
   iam.allowedPolicyMemberDomains:
     rules:
       - allow:
