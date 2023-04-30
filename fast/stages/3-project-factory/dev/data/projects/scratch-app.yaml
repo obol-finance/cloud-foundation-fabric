@@ -16,7 +16,7 @@ essential_contacts:
   - yarden@obol.app
   - michael@obol.app
 
-# [opt] Labels for the project - merged with the ones defined in defaults
+# Labels for the project - merged with the ones defined in defaults
 labels:
   environment: dev
 
@@ -36,7 +36,7 @@ org_policies:
     rules:
       - allow:
           all: true
-
+          
 services:
   - vpcaccess.googleapis.com
   - run.googleapis.com
