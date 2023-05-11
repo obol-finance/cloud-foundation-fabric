@@ -14,7 +14,8 @@ team_folders = {
         "roles/storage.objectAdmin",
         "roles/secretmanager.admin",
         "roles/source.admin",
-        "roles/iam.serviceAccountAdmin"
+        "roles/iam.serviceAccountAdmin",
+        "roles/resourcemanager.projectIamAdmin"
       ]
     }
     impersonation_groups = [
