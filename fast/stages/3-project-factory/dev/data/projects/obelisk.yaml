@@ -3,6 +3,11 @@
 # Folder the project will be created as children of
 folder_id: folders/280301059633
 
+group_iam:
+  gcp-application@obol.app:
+    - roles/cloudsql.editor
+    - roles/iap.tunnelResourceAccessor
+
 billing_alert:
   amount: 5000
   thresholds:
