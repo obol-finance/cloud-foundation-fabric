@@ -7,6 +7,7 @@ group_iam:
   gcp-application@obol.app:
     - roles/cloudsql.editor
     - roles/iap.tunnelResourceAccessor
+    - roles/logging.privateLogViewer
 
 billing_alert:
   amount: 5000

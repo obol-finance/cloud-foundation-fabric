@@ -4,7 +4,6 @@ team_folders = {
   application = {
     descriptive_name = "Application"
     group_iam = {
-      "gcp-application@obol.app" = ["roles/run.invoker", "roles/cloudbuild.builds.viewer"]
       "gcp-application-devops@obol.app" = [
         "roles/composer.admin",
         "roles/cloudbuild.builds.editor",
