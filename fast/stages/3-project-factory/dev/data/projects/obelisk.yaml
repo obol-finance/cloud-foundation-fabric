@@ -52,6 +52,7 @@ services:
   - container.googleapis.com
   - servicenetworking.googleapis.com
   - cloudfunctions.googleapis.com
+  - iap.googleapis.com
 
 vpc:
   gke_setup:
