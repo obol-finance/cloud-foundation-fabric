@@ -9,6 +9,14 @@ group_iam:
     - roles/iap.tunnelResourceAccessor
     - roles/logging.privateLogViewer 
     - roles/iam.serviceAccountUser
+    - roles/run.viewer
+    - roles/secretmanager.secretAccessor
+    - roles/cloudbuild.builds.viewer
+    - roles/compute.viewer
+    - roles/compute.osLogin
+    - roles/storage.insightsCollectorService
+  gcp-data-engineers@obol.app:
+    - roles/composer.admin
 
 billing_alert:
   amount: 5000
