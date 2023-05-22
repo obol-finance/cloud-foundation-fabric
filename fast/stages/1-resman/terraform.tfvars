@@ -15,12 +15,21 @@ team_folders = {
         "roles/source.admin",
         "roles/iam.serviceAccountAdmin",
         "roles/resourcemanager.projectIamAdmin",
-        "roles/compute.instanceAdmin"
+        "roles/compute.instanceAdmin",
+        "roles/iap.admin",
+        "roles/cloudbuild.workerPoolEditor",
+        "roles/artifactregistry.admin",
+        "roles/oauthconfig.editor",
+        "roles/pubsub.admin"
       ]
     }
     impersonation_groups = [
     ]
   }
+}
+
+custom_roles = {
+
 }
 
 
