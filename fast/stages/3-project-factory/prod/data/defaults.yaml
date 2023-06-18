@@ -1,0 +1,18 @@
+# skip boilerplate check
+
+billing_account_id: 010235-396372-5DC925
+
+# [opt] Setup for billing alerts
+billing_alert:
+
+labels:
+  environment: prod
+
+# [opt] Contacts for billing alerts and important notifications
+essential_contacts: []
+
+# [opt] Additional notification channels for billing
+notification_channels: []
+
+shared_vpc_self_link: https://www.googleapis.com/compute/v1/nyx-prod-net-spoke-0/global/networks/prod-spoke-0
+vpc_host_project: nyx-prod-net-spoke-0

@@ -1,0 +1,63 @@
+# skip boilerplate check
+
+# Folder the project will be created as children of
+folder_id: folders/837962433617
+
+group_iam:
+  gcp-application@obol.app:
+    - roles/logging.privateLogViewer
+    - roles/run.viewer
+    - roles/secretmanager.viewer
+    - roles/cloudbuild.builds.viewer
+
+billing_alert:
+  amount: 5000
+  thresholds:
+    current:
+      - 0.5
+      - 0.8
+    forecasted: []
+  credit_treatment: INCLUDE_ALL_CREDITS
+
+essential_contacts:
+  - yarden@obol.app
+  - michael@obol.app
+
+# Labels for the project - merged with the ones defined in defaults
+labels:
+  environment: prod
+
+org_policies:
+  compute.restrictLoadBalancerCreationForTypes:
+    rules:
+      - allow:
+          values:
+            - EXTERNAL_HTTP_HTTPS
+  run.allowedIngress:
+    rules:
+      - allow:
+          all: true
+  iam.allowedPolicyMemberDomains:
+    rules:
+      - allow:
+          all: true
+
+services:
+  - vpcaccess.googleapis.com
+  - run.googleapis.com
+  - artifactregistry.googleapis.com
+  - cloudbuild.googleapis.com
+  - secretmanager.googleapis.com
+  - pubsub.googleapis.com
+  - composer.googleapis.com
+  - container.googleapis.com
+  - servicenetworking.googleapis.com
+  - cloudfunctions.googleapis.com
+  - iap.googleapis.com
+
+vpc:
+  gke_setup:
+  subnets_iam:
+  # Host project the project will be service project of
+
+  host_project: nyx-prod-net-spoke-0
