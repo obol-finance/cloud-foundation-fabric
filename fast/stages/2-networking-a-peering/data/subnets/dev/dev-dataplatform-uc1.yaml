@@ -2,7 +2,7 @@
 
 region: us-central1
 description: Default subnet for dev Data Platform
-ip_cidr_range: 10.128.48.0/24
+ip_cidr_range: 172.16.0.0/12
 secondary_ip_ranges:
-   pods: 100.128.48.0/20
-   services: 100.255.48.0/24
+  pods: 10.10.8.0/22
+  services: 10.10.12.0/24
