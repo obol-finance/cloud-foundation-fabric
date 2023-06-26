@@ -10,7 +10,7 @@ team_folders = {
         "roles/run.admin",
         "roles/cloudfunctions.admin",
         "roles/cloudsql.admin",
-        "roles/storage.objectAdmin",
+        "roles/storage.admin",
         "roles/secretmanager.admin",
         "roles/source.admin",
         "roles/iam.serviceAccountAdmin",
