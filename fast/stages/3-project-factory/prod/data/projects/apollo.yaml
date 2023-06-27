@@ -9,6 +9,8 @@ group_iam:
     - roles/run.viewer
     - roles/secretmanager.viewer
     - roles/cloudbuild.builds.viewer
+  gcp-data-engineers@obol.app:
+    - roles/composer.user
 
 billing_alert:
   amount: 5000
