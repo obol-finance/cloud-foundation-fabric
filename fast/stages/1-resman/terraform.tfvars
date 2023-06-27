@@ -16,6 +16,7 @@ team_folders = {
         "roles/iam.serviceAccountAdmin",
         "roles/resourcemanager.projectIamAdmin",
         "roles/compute.instanceAdmin",
+        "roles/compute.viewer",
         "roles/iap.admin",
         "roles/cloudbuild.workerPoolEditor",
         "roles/artifactregistry.admin",
