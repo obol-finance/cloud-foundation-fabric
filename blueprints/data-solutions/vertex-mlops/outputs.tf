@@ -39,8 +39,3 @@ output "notebook" {
     { for k, v in resource.google_notebooks_instance.playground : k => v.id }
   )
 }
-
-output "project_id" {
-  description = "Project ID."
-  value       = module.project.project_id
-}
