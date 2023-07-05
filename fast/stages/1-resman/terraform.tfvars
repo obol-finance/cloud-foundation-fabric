@@ -21,7 +21,9 @@ team_folders = {
         "roles/cloudbuild.workerPoolEditor",
         "roles/artifactregistry.admin",
         "roles/oauthconfig.editor",
-        "roles/pubsub.admin"
+        "roles/pubsub.admin",
+        "roles/iam.serviceAccountUser",
+        "roles/iap.tunnelResourceAccessor"
       ]
     }
     impersonation_groups = [
