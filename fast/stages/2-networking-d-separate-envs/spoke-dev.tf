@@ -80,6 +80,10 @@ module "dev-spoke-firewall" {
   }
 }
 
+resource "google_compute_address" "nat-ip" {
+    name    = "dev-spoke-nat-gateway"
+}
+
 module "dev-spoke-cloudnat" {
   for_each       = toset(values(module.dev-spoke-vpc.subnet_regions))
   source         = "../../../modules/net-cloudnat"
@@ -90,6 +94,9 @@ module "dev-spoke-cloudnat" {
   router_network = module.dev-spoke-vpc.name
   router_asn     = 4200001024
   logging_filter = "ERRORS_ONLY"
+  addresses = [
+    google_compute_address.nat-ip.*.self_link
+  ]
 }
 
 # Create delegated grants for stage3 service accounts
