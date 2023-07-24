@@ -101,6 +101,3 @@ resource "google_compute_address" "nat-ip" {
     project        = module.landing-project.project_id
     region         = var.regions.primary
 }
-//output "nat_created_ip" {
-//    value = google_compute_address.nat-ip.*.self_link
-//}
