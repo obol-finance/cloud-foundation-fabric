@@ -93,4 +93,11 @@ module "landing-nat-primary" {
   router_name    = "prod-nat-${local.region_shortnames[var.regions.primary]}"
   router_network = module.landing-vpc.name
   router_asn     = 4200001024
+  addresses      = [ "landing-nat-gateway" ]
+}
+
+resource "google_compute_address" "nat-ip" {
+    name           = "landing-nat-gateway"
+    project        = module.landing-project.project_id
+    region         = var.regions.primary
 }

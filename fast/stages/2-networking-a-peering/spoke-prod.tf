@@ -89,6 +89,13 @@ module "prod-spoke-cloudnat" {
   router_network = module.prod-spoke-vpc.name
   router_asn     = 4200001024
   logging_filter = "ERRORS_ONLY"
+  addresses      = [ "prod-nat-ip" ]
+}
+
+resource "google_compute_address" "prod-nat-ip" {
+    name           = "prod-nat-ip"
+    project        = module.prod-spoke-project.project_id
+    region         = var.regions.primary
 }
 
 # Create delegated grants for stage3 service accounts
