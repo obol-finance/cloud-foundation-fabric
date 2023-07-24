@@ -80,8 +80,6 @@ module "dev-spoke-firewall" {
   }
 }
 
-
-
 module "dev-spoke-cloudnat" {
   for_each       = toset(values(module.dev-spoke-vpc.subnet_regions))
   source         = "../../../modules/net-cloudnat"
