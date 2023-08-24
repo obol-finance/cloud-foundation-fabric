@@ -23,7 +23,8 @@ team_folders = {
         "roles/oauthconfig.editor",
         "roles/pubsub.admin",
         "roles/iam.serviceAccountUser",
-        "roles/iap.tunnelResourceAccessor"
+        "roles/iap.tunnelResourceAccessor",
+        "roles/iam.workloadIdentityPoolAdmin"
       ]
     }
     impersonation_groups = [
