@@ -46,6 +46,12 @@ org_policies:
     rules:
       - allow:
           all: true
+  sql.restrictPublicIp:
+    rules:
+      - enforce: false
+  sql.restrictAuthorizedNetworks:
+    rules:
+      - enforce: false
   iam.allowedPolicyMemberDomains:
     rules:
       - allow:
