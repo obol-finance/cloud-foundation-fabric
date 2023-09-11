@@ -6,4 +6,8 @@ ip_cidr_range: 172.16.0.0/12
 secondary_ip_ranges:
   pods: 10.10.8.0/22
   services: 10.10.12.0/24
-  
+flow_logs:
+  flow_sampling: 0.5
+  aggregation_interval: "INTERVAL_1_MIN"
+  metadata: "INCLUDE_ALL_METADATA"
+  filter_expression: null
