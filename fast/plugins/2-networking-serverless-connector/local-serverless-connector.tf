@@ -37,6 +37,13 @@ module "dev-spoke-vpc-serverless" {
     description   = "VPC Serverless Connector for the primary region."
     ip_cidr_range = var.serverless_connector_config.dev-primary.ip_cidr_range
     region        = var.regions.primary
+    flow_logs_config = {
+      flow_sampling        = 0.5
+      aggregation_interval = "INTERVAL_1_MIN"
+      metadata             = "INCLUDE_ALL_METADATA"
+      filter               = null
+
+    }
   }]
 }
 
@@ -50,6 +57,13 @@ module "prod-spoke-vpc-serverless" {
     description   = "VPC Serverless Connector for the primary region."
     ip_cidr_range = var.serverless_connector_config.prod-primary.ip_cidr_range
     region        = var.regions.primary
+    flow_logs_config = {
+      flow_sampling        = 0.5
+      aggregation_interval = "INTERVAL_1_MIN"
+      metadata             = "INCLUDE_ALL_METADATA"
+      filter               = null
+
+    }
   }]
 }
 
