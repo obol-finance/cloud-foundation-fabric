@@ -3,3 +3,8 @@
 region: us-central1
 ip_cidr_range: 10.128.32.0/24
 description: Default subnet for dev
+flow_logs:
+  flow_sampling: 0.5
+  aggregation_interval: "INTERVAL_1_MIN"
+  metadata: "INCLUDE_ALL_METADATA"
+  filter_expression: null
