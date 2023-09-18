@@ -9,6 +9,11 @@ group_iam:
     - roles/run.viewer
     - roles/secretmanager.viewer
     - roles/cloudbuild.builds.viewer
+    - roles/monitoring.viewer
+    - roles/monitoring.dashboardViewer
+    - roles/monitoring.cloudConsoleIncidentEditor
+    - roles/monitoring.snoozeViewer
+    - roles/monitoring.servicesViewer
   gcp-data-engineers@obol.app:
     - roles/composer.user
 
