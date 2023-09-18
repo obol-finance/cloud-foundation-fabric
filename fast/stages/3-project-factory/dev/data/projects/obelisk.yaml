@@ -16,6 +16,11 @@ group_iam:
     - roles/compute.viewer
     - roles/compute.osLogin
     - roles/storage.insightsCollectorService
+    - roles/monitoring.viewer
+    - roles/monitoring.dashboardViewer
+    - roles/monitoring.cloudConsoleIncidentEditor
+    - roles/monitoring.snoozeViewer
+    - roles/monitoring.servicesViewer
   gcp-data-engineers@obol.app:
     - roles/composer.admin
 
@@ -46,16 +51,17 @@ org_policies:
     rules:
       - allow:
           all: true
-  sql.restrictPublicIp:
-    rules:
-      - enforce: false
-  sql.restrictAuthorizedNetworks:
-    rules:
-      - enforce: false
   iam.allowedPolicyMemberDomains:
     rules:
       - allow:
           all: true
+  sql.restrictAuthorizedNetworks:
+    rules:
+    - enforce: false
+  sql.restrictPublicIp:
+    rules:
+    - enforce: false
+  
 
 services:
   - vpcaccess.googleapis.com
