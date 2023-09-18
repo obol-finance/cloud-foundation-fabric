@@ -199,6 +199,13 @@ module "organization" {
       type                 = attrs.type
     }
   }
+  iam_audit_config = {
+    allServices = {
+      DATA_READ = []
+      ADMIN_READ = []
+      DATA_WRITE = []
+    }
+  }
 }
 
 # assign the custom restricted Organization Admin role to the relevant service
