@@ -43,10 +43,36 @@ variable "serverless_connector_config" {
         min = optional(number)
       }), {})
     })
+    dev-secondary = object({
+      ip_cidr_range = optional(string, "10.255.0.128/28")
+      machine_type  = optional(string)
+      instances = optional(object({
+        max = optional(number)
+        min = optional(number)
+      }), {})
+      throughput = optional(object({
+        max = optional(number)
+        min = optional(number)
+      }), {})
+    })
+    prod-secondary = object({
+      ip_cidr_range = optional(string, "10.255.0.0/28")
+      machine_type  = optional(string)
+      instances = optional(object({
+        max = optional(number)
+        min = optional(number)
+      }), {})
+      throughput = optional(object({
+        max = optional(number)
+        min = optional(number)
+      }), {})
+    })
   })
   default = {
     dev-primary  = {}
     prod-primary = {}
+    dev-secondary  = {}
+    prod-secondary = {}
   }
   nullable = false
 }
