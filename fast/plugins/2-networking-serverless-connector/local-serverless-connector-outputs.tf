@@ -20,6 +20,8 @@ locals {
   plugin_sc_tfvars = {
     dev  = google_vpc_access_connector.dev-primary.0.id
     prod = google_vpc_access_connector.prod-primary.0.id
+    dev-secondary  = google_vpc_access_connector.dev-secondary.0.id
+    prod-secondary = google_vpc_access_connector.prod-secondary.0.id
   }
 }
 
