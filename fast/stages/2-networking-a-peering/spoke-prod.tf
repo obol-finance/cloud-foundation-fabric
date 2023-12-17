@@ -92,10 +92,18 @@ module "prod-spoke-cloudnat" {
   addresses      = [ "prod-nat-ip" ]
 }
 
+# This is not ideal. Ideally we'd like to iterate over all regions. 
+# The only way to do it now is to delete the original nat and start from scratch (causing production to be down)
 resource "google_compute_address" "prod-nat-ip" {
     name           = "prod-nat-ip"
     project        = module.prod-spoke-project.project_id
     region         = var.regions.primary
+}
+
+resource "google_compute_address" "prod-nat-ip-secondary" {
+    name           = "prod-nat-ip"
+    project        = module.prod-spoke-project.project_id
+    region         = var.regions.secondary
 }
 
 # Create delegated grants for stage3 service accounts

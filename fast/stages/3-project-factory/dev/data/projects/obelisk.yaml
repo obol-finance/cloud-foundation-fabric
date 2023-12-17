@@ -25,6 +25,7 @@ group_iam:
     - roles/composer.admin
   gcp-product@obol.app:
     - roles/cloudbuild.builds.viewer
+    - roles/logging.privateLogViewer
     
   
 
@@ -59,6 +60,13 @@ org_policies:
     rules:
       - allow:
           all: true
+  sql.restrictAuthorizedNetworks:
+    rules:
+    - enforce: false
+  sql.restrictPublicIp:
+    rules:
+    - enforce: false
+  
 
 services:
   - vpcaccess.googleapis.com
