@@ -26,8 +26,9 @@ group_iam:
   gcp-product@obol.app:
     - roles/cloudbuild.builds.viewer
     - roles/logging.privateLogViewer
-    
-  
+  gcp-application-team-leads@obol.app:
+    - roles/composer.user
+    - roles/cloudsql.editor
 
 billing_alert:
   amount: 5000
@@ -62,11 +63,10 @@ org_policies:
           all: true
   sql.restrictAuthorizedNetworks:
     rules:
-    - enforce: false
+      - enforce: false
   sql.restrictPublicIp:
     rules:
-    - enforce: false
-  
+      - enforce: false
 
 services:
   - vpcaccess.googleapis.com

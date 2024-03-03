@@ -16,6 +16,9 @@ group_iam:
     - roles/monitoring.servicesViewer
   gcp-data-engineers@obol.app:
     - roles/composer.user
+  gcp-application-team-leads@obol.app:
+    - roles/composer.user
+    - roles/cloudsql.editor
 
 billing_alert:
   amount: 5000
