@@ -26,7 +26,9 @@ team_folders = {
         "roles/iap.tunnelResourceAccessor",
         "roles/iam.workloadIdentityPoolAdmin",
         "roles/monitoring.alertPolicyEditor",
-        "roles/monitoring.editor"
+        "roles/monitoring.editor",
+        # TODO (Or): this is grants too high permissions
+        "roles/editor"
       ]
     }
     impersonation_groups = [
