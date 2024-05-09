@@ -24,7 +24,9 @@ team_folders = {
         "roles/pubsub.admin",
         "roles/iam.serviceAccountUser",
         "roles/iap.tunnelResourceAccessor",
-        "roles/iam.workloadIdentityPoolAdmin"
+        "roles/iam.workloadIdentityPoolAdmin",
+        "roles/monitoring.alertPolicyEditor",
+        "roles/monitoring.editor"
       ]
     }
     impersonation_groups = [
